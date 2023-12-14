@@ -1,6 +1,6 @@
 # Proton CAPTCHA (PoC)
 
-This is a proof of concept project to automatically solve [Proton's new CAPTCHA](https://proton.me/blog/proton-CAPTCHA) via requests. This project takes advantage of many basic and fundamental flaws with their new CAPTCHA.
+This is a proof of concept project to automatically solve [Proton's new CAPTCHA](https://proton.me/blog/proton-captcha) via requests. This project takes advantage of many basic and fundamental flaws with their new CAPTCHA.
 
 Proton is constantly updating so this project might become irrelevant very quick.
 
