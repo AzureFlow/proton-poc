@@ -49,7 +49,7 @@ This is not a comprehensive list but a few things that would help.
 - Detect inconsistent and out of order headers.
 - Detect more fingerprint inconsistencies (e.g. `timezoneOffset` not matching `timezone` and match with the geolocation of the IP address, invalid , etc)
   - Allow [FingerprintJS](https://dev.fingerprint.com/docs) to collect more unique info like canvas / WebGL and [correlate](https://research.google/pubs/pub45581/) it to `webglVendorAndRenderer`.
-  - Actually validate the `visitorId` fingerprint hash equals the computed components.
+  - Actually validate the `visitorId` fingerprint `x64hash128` equals the computed components.
 - [TLS Fingerprinting](https://engineering.salesforce.com/tls-fingerprinting-with-ja3-and-ja3s-247362855967/). This can be used to block non-browser clients such as cURL.
 - ~~IP addresses and their reputation should be scrutinized more, especially ones used in recent [botnet attacks](https://iplists.firehol.org/). However, this is unlikely since ProtonMail natively supports [Tor](https://www.torproject.org/).~~ Update: I can't seem to find any proxies (including residential) that allow a CAPTCHA challenge.
 - Completely remove the "1D Puzzle." The flaws are too numerous to count. Even if the whole purpose is to distract the user while collecting mouse events.
