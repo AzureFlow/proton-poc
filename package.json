@@ -17,7 +17,7 @@
 	"dependencies": {
 		"chalk": "^5.3.0",
 		"commander": "^11.1.0",
-		"https-proxy-agent": "^7.0.2",
+		"https-proxy-agent": "^7.0.3",
 		"ndarray": "^1.0.19",
 		"node-fetch": "^3.3.2",
 		"ora": "^7.0.1",
