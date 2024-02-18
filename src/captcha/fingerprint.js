@@ -4,26 +4,17 @@ import {readFile} from "fs/promises";
 import {randomInt, randomItem} from "../utils.js";
 import {fileURLToPath} from "url";
 import * as constants from "../constants.js";
+import {DateTime} from "luxon";
 
 
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
 
 const gpus = (await readFile(__dirname + "/../../resources/gpus.txt", "utf8")).replaceAll("\r\n", "\n").split("\n");
 
-// This will change with daylight savings time
 const timezones = [
-	{
-		timezone: "America/New_York",
-		offset: 240,
-	},
-	{
-		timezone: "America/Chicago",
-		offset: 300,
-	},
-	{
-		timezone: "America/Los_Angeles",
-		offset: 420,
-	},
+	"America/New_York",
+	"America/Chicago",
+	"America/Los_Angeles",
 ];
 
 const screenResolutions = [
@@ -46,7 +37,8 @@ export function getFingerprint(aesKey, frame = "login") {
 	}
 
 	const res = randomItem(screenResolutions);
-	const tz = randomItem(timezones);
+	const tzName = randomItem(timezones);
+	const tzOffset = -DateTime.local({zone: tzName}).offset;
 
 	const typeString = "password123";
 	const payloadRaw = {
@@ -235,8 +227,8 @@ export function getFingerprint(aesKey, frame = "login") {
 			res[1],
 		],
 		sessionStorage: true,
-		timezone: tz.timezone,
-		timezoneOffset: tz.offset,
+		timezone: tzName,
+		timezoneOffset: tzOffset,
 		touchSupport: {
 			maxTouchPoints: 0,
 			touchEvent: false,
