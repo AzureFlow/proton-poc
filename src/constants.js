@@ -10,18 +10,20 @@ const CACHE_FILE = __dirname + "/../.proton-version";
 
 export const DEBUG = true;
 
+// Update with:
+// JSON.stringify((await navigator.userAgentData.getHighEntropyValues(["fullVersionList"])).fullVersionList, null, 4);
 export const FULL_VERSION_LIST = [
 	{
-		brand: "Chromium",
-		version: "118.0.5993.88",
+		brand: "Not A(Brand",
+		version: "99.0.0.0",
 	},
 	{
 		brand: "Google Chrome",
-		version: "118.0.5993.88",
+		version: "121.0.6167.185",
 	},
 	{
-		brand: "Not=A?Brand",
-		version: "99.0.0.0",
+		brand: "Chromium",
+		version: "121.0.6167.185",
 	},
 ];
 export const USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36";
