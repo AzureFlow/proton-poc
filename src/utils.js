@@ -12,7 +12,6 @@ export function randomItem(items) {
 }
 
 /**
- *
  * @param {number} min
  * @param {number} max
  * @returns {number}
@@ -22,7 +21,6 @@ export function randomInt(min, max) {
 }
 
 /**
- *
  * @param {number} min
  * @param {number} max
  * @returns {number}
