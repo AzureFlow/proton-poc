@@ -25,6 +25,8 @@ const screenResolutions = [
 	[1280, 1024],
 ];
 
+const FINGERPRINT_VERSION = "2.2.5";
+
 
 /**
  * @param {Uint8Array} aesKey
@@ -241,7 +243,7 @@ export function getFingerprint(aesKey, frame = "login") {
 			brands: constants.VERSION_BRANDS,
 			fullVersionList: constants.FULL_VERSION_LIST,
 		},
-		v: "2.2.4",
+		v: FINGERPRINT_VERSION,
 		vendor: "Google Inc.",
 		vendorFlavors: [
 			"chrome",
