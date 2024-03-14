@@ -1,4 +1,3 @@
-"use strict";
 import crypto from "crypto";
 import {isMainThread, parentPort, Worker, workerData} from "worker_threads";
 import {fileURLToPath} from "url";

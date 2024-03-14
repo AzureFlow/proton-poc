@@ -1,4 +1,3 @@
-"use strict";
 import fetch from "node-fetch";
 import * as constants from "./constants.js";
 import API_ERRORS from "./errors.js";

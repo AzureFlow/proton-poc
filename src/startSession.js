@@ -1,4 +1,3 @@
-"use strict";
 import fetch from "node-fetch";
 import {CookieJar} from "tough-cookie";
 import {getRandomString} from "./utils.js";

@@ -1,4 +1,3 @@
-"use strict";
 import {PNG} from "pngjs";
 import ndarray from "ndarray";
 import {readFile} from "fs/promises";

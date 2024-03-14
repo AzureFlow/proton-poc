@@ -1,4 +1,3 @@
-"use strict";
 import crypto from "crypto";
 import {readFile} from "fs/promises";
 import {randomInt, randomItem} from "../utils.js";
